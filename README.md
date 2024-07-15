@@ -60,4 +60,15 @@ spring.jpa.hibernate.ddl-auto=update
 in SpringsecurityConfiguration.java extend WebSecurityConfigurerAdapter and override configure method 
 and create bean of NoOpPasswordEncoder as we are not using any encoding for password .
 
+once application is up .try hitting http://localhost:8080/ , it try to invole below method of controller 
 
+@GetMapping("/")
+    public String home() {
+        return("<h1>Welcome</h1>");
+    }
+	
+but spring secutity kicks in and log in form is displayed . Log in with user given in data.sql and then try to access this page (http://localhost:8080/) once again .Success this time .
+to log out use below URL 
+
+(http://localhost:8080/logout
+	
